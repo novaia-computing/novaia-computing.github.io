@@ -14,7 +14,7 @@
             font-kerning: auto;
             margin: 0;
             background-color: #000000;
-            overflow: hidden;
+            overflow-x: hidden;
         }
         
         .header {
@@ -53,6 +53,27 @@
             color: #ffffff;
             font-size: 17px;
             font-weight: 500;
+        }
+        
+        .hamburger-container {
+            display: none;
+            padding-right: 15px;
+            align-items: right;
+        }
+        
+        .hamburger-menu {
+            display: block;
+            height: 37px;
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 550px) {
+            .right-section {
+                display: none;
+            }
+            .hamburger-container {
+                display: flex;
+            }
         }
         
         .hero {
@@ -98,6 +119,9 @@
         <div class="right-section">
             <p>Products</p>
             <p>Contact</p>
+        </div>
+        <div class="hamburger-container">
+            <img src="images/hamburger-menu.svg" class="hamburger-menu">
         </div>
     </div>
     <div class="hero">
