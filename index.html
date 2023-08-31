@@ -12,80 +12,100 @@
             font-family: "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
             font-size: 17px;
             font-kerning: auto;
-        }
-        
-        ul {
-            list-style-type: none;
             margin: 0;
-            padding: 0;
+            background-color: #000000;
         }
         
-        li {
-            display: block;
-            padding-bottom: 10px;
+        .header {
+            position: fixed;
+            z-index: 10;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            width: 100%;
         }
         
-        img {
-            padding-top: 20px;
-            border-radius: 2px;
+        .labyrinth-logo {
+            height: 75px;
+            cursor: pointer;
         }
         
-        .column {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
+        .left-section {
+            width: 180px;
+            display: grid;
+            grid-template-columns: 75px 1fr;
+            align-content: center;
         }
         
-        h1 {
-            font-size: 36px;
+        .right-section {
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 17px;
             font-weight: 500;
         }
         
-        h2 {
-            font-weight: 500;
-            font-size: 24px;
+        .hero {
+            width: 100%;
+            min-width: 1000px;
+            min-height: 500px;
+            align-content: center;
+            overflow: hidden;
         }
         
-        a {
-            color: rgb(33, 150, 243);
+        .hero-video {
+            filter: brightness(0.5);
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
         
-        a:visited {
-            color: rgb(33, 150, 243);
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
         }
         
-        iframe {
-            padding-top: 15px;
+        .about {
+            padding-left: 10px;
+            color: white;
+            height: 100vh;
+            width: 100vw;
         }
-        
-        .centered-image {}
     </style>
 </head>
 
 <body>
-    <div class="column">
-        <div class="centered-image">
-            <img src="images/labyrinth-ai-logo-cropped.png" alt="Labyrinth AI Logo" , width="190px">
+    <div class="header">
+        <div class="left-section">
+            <img src="images/labyrinth-web-logo.png" class="labyrinth-logo">
         </div>
-        <h1>Labyrinth AI</h1>
+        <div class="right-section">
+            <p>Products</p>
+            <p>Contact</p>
+        </div>
+    </div>
+    <div class="hero">
+        <video playsinline autoplay muted loop class="hero-video">
+            <source src="https://res.cloudinary.com/dlblfkz6e/video/upload/v1693449816/labyrinth-b-roll_vla65y.mp4" type="video/mp4">
+        </video>
+        <h1 class="hero-text">Generative AI for 3D workflows</h1>
+    </div>
+    <div class="about">
         <p>
-            Building virtual worlds where humans and AI interact.
+            The website is currently under construction. Please check back later.
         </p>
-        <ul>
-            <li>
-                <a href="https://github.com/hayden-donnelly/dream-field-demo">
-                    <h2>Dream Field Demo</h2>
-                </a>
-                Demo of our upcoming virtual reality experience where you can speak and interact with AI.
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ozn3RVhMrf0" title="Dream Field Demo" frameborder="0" allowfullscreen; modestbranding; controls="0"></iframe>
-            </li>
-            <li>
-                <a href="https://github.com/hayden-donnelly/ntg-unity">
-                    <h2>Neural Terrain Generation</h2>
-                </a>
-                Diffusion based 3D terrain generation.
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/MZakPuXyquk" title="Neural Terrain Generation Trailer" frameborder="0" allowfullscreen; modestbranding; controls="0"></iframe>
-            </li>
-        </ul>
     </div>
 </body>
