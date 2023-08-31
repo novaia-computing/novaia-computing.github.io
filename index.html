@@ -112,17 +112,28 @@
             height: 100vh;
             width: 100vw;
         }
+        
+        .header-link {
+            text-decoration: none;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
         <div class="left-section">
-            <img src="images/labyrinth-web-logo.png" class="labyrinth-logo">
+            <a href="./index.html">
+                <img src="images/labyrinth-web-logo.png" class="labyrinth-logo">
+            </a>
         </div>
         <div class="right-section">
-            <p>Products</p>
-            <p>Contact</p>
+            <a href="./work.html" class="header-link">
+                <p>Our Work</p>
+            </a>
+            <a href="./contact.html" class="header-link">
+                <p>Contact</p>
+            </a>
         </div>
         <div class="hamburger-container">
             <img src="images/hamburger-menu.svg" class="hamburger-menu">

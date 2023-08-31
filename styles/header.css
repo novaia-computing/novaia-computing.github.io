@@ -1,0 +1,63 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: background-color 0.15s ease-in-out;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.labyrinth-logo {
+    height: 75px;
+    cursor: pointer;
+}
+
+.left-section {
+    width: 180px;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-content: center;
+}
+
+.right-section {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.hamburger-container {
+    display: none;
+    padding-right: 15px;
+    align-items: right;
+}
+
+.hamburger-menu {
+    display: block;
+    height: 37px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+    .right-section {
+        display: none;
+    }
+    .hamburger-container {
+        display: flex;
+    }
+}
+
+.header-link {
+    text-decoration: none;
+    color: white;
+}
