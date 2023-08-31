@@ -26,8 +26,15 @@
         
         .our-work {
             display: flex;
+            flex-direction: row;
             justify-content: space-evenly;
             max-width: 1000px;
+        }
+        
+        @media only screen and (max-width: 740px) {
+            .our-work {
+                flex-direction: column;
+            }
         }
         
         .our-work-section {
@@ -45,6 +52,11 @@
         
         .our-work-image {
             width: 80%;
+        }
+        
+        .our-work-link {
+            text-decoration: none;
+            color: white;
         }
     </style>
 </head>
@@ -76,14 +88,18 @@
     </div>
     <div class="our-work-container">
         <div class="our-work">
-            <div class="our-work-section">
-                <h2 class="our-work-section-title">Neural Terrain Generation</h2>
-                <img src="images/ntg-screenshot-cropped-pre.png" class="our-work-image" salt="Screenshot of Dream Field.">
-            </div>
-            <div class="our-work-section">
-                <h2 class="our-work-section-title">Dream Field</h2>
-                <img src="images/dream-field-screenshot-cropped.png" class="our-work-image" alt="Screenshot of Dream Field.">
-            </div>
+            <a href="./work.html" class="our-work-link">
+                <div class="our-work-section">
+                    <h2 class="our-work-section-title">Neural Terrain Generation</h2>
+                    <img src="images/ntg-screenshot-cropped-pre.png" class="our-work-image" salt="Screenshot of Dream Field.">
+                </div>
+            </a>
+            <a href="./work.html" class="our-work-link">
+                <div class="our-work-section">
+                    <h2 class="our-work-section-title">Dream Field</h2>
+                    <img src="images/dream-field-screenshot-cropped.png" class="our-work-image" alt="Screenshot of Dream Field.">
+                </div>
+            </a>
         </div>
     </div>
     <div class="about">
