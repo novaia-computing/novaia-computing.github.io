@@ -1,0 +1,50 @@
+.about {
+    padding-left: 10px;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.our-work-container {
+    display: flex;
+    justify-content: center;
+}
+
+.our-work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 1000px;
+}
+
+@media only screen and (max-width: 740px) {
+    .our-work {
+        flex-direction: column;
+    }
+}
+
+.our-work-section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.our-work-section-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.our-work-image {
+    width: 95%;
+}
+
+.our-work-link {
+    text-decoration: none;
+    color: white;
+}
+
+.our-work-link:hover {
+    text-decoration: underline;
+}
