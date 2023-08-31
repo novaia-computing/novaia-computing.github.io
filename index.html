@@ -24,8 +24,10 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 5px;
             width: 100%;
+            transition: background-color 0.15s ease-in-out;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
         
         .labyrinth-logo {
@@ -108,4 +110,18 @@
             The website is currently under construction. Please check back later.
         </p>
     </div>
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                document.querySelector('.header').style.backgroundColor = "black";
+            } else {
+                document.querySelector('.header').style.backgroundColor = "transparent";
+            }
+        }
+    </script>
 </body>
