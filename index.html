@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/basic.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/home.css">
     <title>Labyrinth AI</title>
     <style>
         .about {
@@ -16,6 +17,34 @@
             color: white;
             height: 100vh;
             width: 100vw;
+        }
+        
+        .our-work-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .our-work {
+            display: flex;
+            justify-content: space-evenly;
+            max-width: 1000px;
+        }
+        
+        .our-work-section {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
+        
+        .our-work-section-title {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .our-work-image {
+            width: 80%;
         }
     </style>
 </head>
@@ -44,6 +73,18 @@
             <source src="https://res.cloudinary.com/dlblfkz6e/video/upload/v1693449816/labyrinth-b-roll_vla65y.mp4" type="video/mp4">
         </video>
         <h1 class="hero-text">Generative AI for 3D workflows</h1>
+    </div>
+    <div class="our-work-container">
+        <div class="our-work">
+            <div class="our-work-section">
+                <h2 class="our-work-section-title">Neural Terrain Generation</h2>
+                <img src="images/ntg-screenshot-cropped-pre.png" class="our-work-image" salt="Screenshot of Dream Field.">
+            </div>
+            <div class="our-work-section">
+                <h2 class="our-work-section-title">Dream Field</h2>
+                <img src="images/dream-field-screenshot-cropped.png" class="our-work-image" alt="Screenshot of Dream Field.">
+            </div>
+        </div>
     </div>
     <div class="about">
         <p>
