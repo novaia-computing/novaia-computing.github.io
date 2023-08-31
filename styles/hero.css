@@ -1,0 +1,25 @@
+.hero {
+    width: 100%;
+    min-width: 1000px;
+    min-height: 500px;
+    align-content: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    filter: brightness(0.5);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
