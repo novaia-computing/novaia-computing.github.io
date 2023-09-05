@@ -1,2 +1,2 @@
-# labyrinth-ai.github.io
-Labyrinth AI website.
+#  novaia-computing.github.io
+Novaia website.
