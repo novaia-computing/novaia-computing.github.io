@@ -24,3 +24,19 @@
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+.our-work-link {
+    padding: 5px;
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
+}
+
+.our-work-link:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+.our-work-link-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
