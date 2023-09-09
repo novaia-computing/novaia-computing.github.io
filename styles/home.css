@@ -26,12 +26,11 @@
 .our-work-section {
     display: flex;
     flex-direction: column;
-    align-content: center;
     align-items: center;
 }
 
 .our-work-section-title {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     text-align: center;
 }
