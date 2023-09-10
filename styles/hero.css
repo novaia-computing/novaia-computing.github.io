@@ -1,12 +1,14 @@
 .hero {
     width: 100%;
-    min-width: 1000px;
-    min-height: 500px;
     align-content: center;
     overflow: hidden;
 }
 
 .hero-video {
+    width: 100%;
+    min-width: 1000px;
+    min-height: 500px;
+    object-fit: cover;
     filter: brightness(0.5);
     position: relative;
     left: 50%;
