@@ -11,3 +11,7 @@
     width: 100%;
     max-width: 800px;
 }
+
+.email-link {
+    color: rgb(88, 160, 255);
+}
