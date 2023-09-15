@@ -25,36 +25,16 @@
 }
 
 .right-section {
+    margin-right: 30px;
     width: 300px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: right;
     align-content: center;
     align-items: center;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
-}
-
-.hamburger-container {
-    display: none;
-    padding-right: 15px;
-    align-items: right;
-}
-
-.hamburger-menu {
-    display: block;
-    height: 37px;
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 550px) {
-    .right-section {
-        display: none;
-    }
-    .hamburger-container {
-        display: flex;
-    }
 }
 
 .header-link {
