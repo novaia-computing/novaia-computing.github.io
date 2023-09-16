@@ -25,13 +25,11 @@
 }
 
 .right-section {
-    margin-right: 30px;
+    padding-right: 30px;
     width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: right;
-    align-content: center;
-    align-items: center;
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
