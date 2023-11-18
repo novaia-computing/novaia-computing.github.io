@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <meta name="author" content="Novaia">
     <meta name="keywords" content="Novaia, Generative AI, Procedural Generation, 3D">
-    <meta name="description" content="Novaia is a generative AI company that creates tools for 3D workflows.">
+    <meta name="description" content="Generative AI for a three dimensional world.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -17,11 +17,43 @@
             font-family: 'Red Hat Mono', monospace;
             text-align: center;
         }
+        h1 {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        #container {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+        }
     </style>
 </head>
-
 <body>
     <h1>Novaia</h1>
+    <div id="container"></div>
     <p>Generative AI for a three dimensional world.</p>
     <p><a href="https://github.com/novaia-computing">GitHub</a> <a href="https://twitter.com/NovaiaComputing">Twitter</a></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        var scene = new THREE.Scene();
+        scene.background = null;
+        var camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(250, 250);
+        document.getElementById("container").appendChild(renderer.domElement);
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var material = new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true });
+        var cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+        camera.position.z = 1.4;
+
+        var SPEED = 0.005;
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotateOnWorldAxis(new THREE.Vector3(0, 1, 0), SPEED);
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
 </body>
+</html>
