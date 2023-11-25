@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="author" content="Novaia">
+    <meta name="keywords" content="Novaia, Generative AI, Procedural Generation, 3D">
+    <meta name="description" content="Generative AI for a three dimensional world.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <title>Novaia</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Red Hat Mono', monospace;
+            overflow: hidden;
+        }
+        h1 {
+            margin-top: 5px;
+            margin-left: 5px;
+            text-align: left;
+            position: absolute;
+            color: white;
+        }
+        .webgl
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            outline: none;
+        }
+        #container {
+            margin: 0 auto;
+        }
+        #prompt-container {
+            position: relative;
+            width: 100%;
+        }
+        #prompt-input {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <h1>Novaia</h1>
+    <div id="prompt-container"></div>
+    <input type="text" id="prompt-input">
+    <div id="container"></div>
+    <script>
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        var container = document.getElementById("container");
+        container.appendChild(renderer.domElement);
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+        var cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotateOnWorldAxis(new THREE.Vector3(0, 1, 0), 0.01);
+            renderer.render(scene, camera);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        window.addEventListener('resize', onWindowResize, false);
+
+        animate();
+    </script>
+</body>
+</html>
